@@ -10,11 +10,13 @@ If you have 2 servers with working network connection configured as below:
 |srv_B|B.B.B.B|
 
 You could start repcached as following:<br> 
-On srv_A: docker run -d --restart unless-stopped --name=repcached -e SLAVE="B.B.B.B" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
+On srv_A: 
+> docker run -d --restart unless-stopped --name=repcached -e SLAVE="B.B.B.B" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
 
-On srv_B: docker run -d --restart unless-stopped --name=repcached -e SLAVE="A.A.A.A" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
+On srv_B: 
+> docker run -d --restart unless-stopped --name=repcached -e SLAVE="A.A.A.A" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
 
-How to test functionality:
+# How to test functionality:
 
 On srv_A: telnet 127.0.0.1 11211 set Test 0 100 10 JournalDev
 
