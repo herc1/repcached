@@ -26,15 +26,18 @@ set Test 0 100 10
 JournalDev
 ```
 
-You should see a message: STORED
+You should see a message: ```STORED```
 
-On srv_B:<br> 
+On srv_B:<br>
+```
 telnet 127.0.0.1 11211
 get Test
-
+```
 You should get a response: <br>
+```
 VALUE Test 0 10
 JournalDev
 END
+```
 
 Additionally, you could try to set key/value on srv_B and get it from srv_A.
