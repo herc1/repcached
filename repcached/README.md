@@ -4,9 +4,9 @@ Repcached is patch set which adds data replication feature to memcached 1.2.x. Y
 # How to use repcached? 
 If you have 2 servers with working network connection configured as below: 
 
-Hostname IP Addreess<br>
-srv_A A.A.A.A<br>
-srv_B B.B.B.B<br>
+**Hostname IP Addreess**<br>
+srv_A      A.A.A.A<br>
+srv_B      B.B.B.B<br>
 You could start repcached as following:<br> 
 On srv_A: docker run -d --restart unless-stopped --name=repcached -e SLAVE="B.B.B.B" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
 
