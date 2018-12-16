@@ -1,5 +1,6 @@
 # What is repcached? 
-Repcached is patch set which adds data replication feature to memcached. You can read more at: http://repcached.lab.klab.org/ It could be used successfully to achieve high availability for memcached.
+Repcached is patch set which adds data replication feature to memcached.<br>
+You can read more at: http://repcached.lab.klab.org/ It could be used successfully to achieve high availability for memcached.
 
 # How to use this image? 
 If you have 2 servers with working network connection configured as below: 
@@ -19,14 +20,18 @@ On srv_B:<br>
 # How to test functionality:
 
 On srv_A:<br> 
-``` telnet 127.0.0.1 11211 <br> set Test 0 100 10 JournalDev ```
+``` telnet 127.0.0.1 11211
+set Test 0 100 10 JournalDev ```
 
 You should see a message STORED
 
 On srv_B:<br> 
-``` telnet 127.0.0.1 11211 <br> get Test ```
+``` telnet 127.0.0.1 11211
+get Test ```
 
-You should get a response: VALUE Test 0 10
-``` JournalDev <br> END ```
+You should get a response: <br>
+```VALUE Test 0 10
+JournalDev
+END ```
 
 Additionally, you could try to set key/value on srv_B and get it from srv_A.
