@@ -19,13 +19,13 @@ On srv_B:<br>
 # How to test functionality:
 
 On srv_A:<br> 
-``` telnet 127.0.0.1 11211 set Test 0 100 10 JournalDev ```
+``` telnet 127.0.0.1 11211 <br>
+set Test 0 100 10 JournalDev ```
 
 You should see a message STORED
 
 On srv_B:<br> 
-``` telnet 127.0.0.1 11211
-get Test ```
+``` telnet 127.0.0.1 11211 <br> get Test ```
 
 You should get a response: VALUE Test 0 10
 ``` JournalDev
