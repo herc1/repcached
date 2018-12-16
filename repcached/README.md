@@ -21,7 +21,7 @@ On srv_B:<br>
 # How to test functionality:
 
 On srv_A:<br> 
-```telnet 127.0.0.1 11211
+```telnet 127.0.0.1 11211\n
 set Test 0 100 10 JournalDev```
 
 You should see a message STORED
