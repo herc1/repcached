@@ -19,7 +19,7 @@ On **srv_B**:
 
 # How to test functionality:
 
-On **srv_A**:  
+On **srv_A**:
 ``` 
 telnet 127.0.0.1 11211 
 set Test 0 100 10 
@@ -28,7 +28,7 @@ JournalDev
 
 You should see a message: ```STORED```
 
-On **srv_B**:  
+On **srv_B**:
 ```
 telnet 127.0.0.1 11211
 get Test
