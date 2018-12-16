@@ -6,7 +6,8 @@ If you have 2 servers with working network connection configured as below:
 Hostname IP Addreess 
 srv_A A.A.A.A 
 srv_B B.B.B.B 
-you could start repcached as following: 
+
+You could start repcached as following: 
 On srv_A: docker run -d --restart unless-stopped --name=repcached -e SLAVE="B.B.B.B" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0 On srv_B: docker run -d --restart unless-stopped --name=repcached -e SLAVE="A.A.A.A" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:1.4.14-0
 
 How to test functionality:
