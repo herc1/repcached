@@ -1,4 +1,4 @@
-#What is repcached? 
+# What is repcached? 
 Repcached is patch set which adds data replication feature to memcached 1.2.x. You can read more at: http://repcached.lab.klab.org/ It could be used successfully to achieve high availability for memcached.
 
 #How to use repcached? 
