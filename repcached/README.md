@@ -10,24 +10,25 @@ If you have 2 servers with working network connection configured as below:
 |srv_B|B.B.B.B|
 
 You could start repcached as following:<br> 
-On srv_A: 
+On srv_A:<br>
 ``` docker run -d --restart unless-stopped --name=repcached -e SLAVE="B.B.B.B" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:tag ```
 
-On srv_B: 
+On srv_B:<br> 
 ``` docker run -d --restart unless-stopped --name=repcached -e SLAVE="A.A.A.A" -p 127.0.0.1:11211:11211 -p 11212:11212 oktec/repcached:tag ```
 
 # How to test functionality:
 
-On srv_A: telnet 127.0.0.1 11211 set Test 0 100 10 JournalDev
+On srv_A:<br> 
+``` telnet 127.0.0.1 11211 set Test 0 100 10 JournalDev ```
 
-#You should see a message STORED
+You should see a message STORED
 
-#On srv_B: telnet 127.0.0.1 11211 get Test
+On srv_B:<br> 
+``` telnet 127.0.0.1 11211
+get Test ```
 
-#You should get a response: VALUE Test 0 10
-
-#JournalDev
-
-#END
+You should get a response: VALUE Test 0 10
+``` JournalDev
+END ```
 
 Additionally, you could try to set key/value on srv_B and get it from srv_A.
