@@ -4,7 +4,7 @@ Repcached is patch set which adds data replication feature to memcached 1.2.x. Y
 # How to use repcached? 
 If you have 2 servers with working network connection configured as below: 
 
-Hostname IP Addreess\n
+Hostname IP Addreess<br>
 srv_A A.A.A.A 
 srv_B B.B.B.B 
 
