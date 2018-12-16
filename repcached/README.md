@@ -25,6 +25,3 @@ How to test functionality:
 #END
 
 Additionally, you could try to set key/value on srv_B and get it from srv_A.
-
-
-test
