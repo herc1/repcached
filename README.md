@@ -49,5 +49,5 @@ Additionally, you could try to set key/value on **srv_B** and get it from **srv_
 # How to build the image?
 ``` 
 git clone https://github.com/herc1/repcached.git
-docker build -t oktec/repcached:1.4.14-0:tag . 
+docker build -t oktec/repcached:tag . 
 ```
